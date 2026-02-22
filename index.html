@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Events Portal</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f6f9;
+    text-align:center;
+}
+
+header{
+    background:#2c3e50;
+    color:white;
+    padding:20px;
+}
+
+.nav-btn{
+    display:inline-block;
+    margin-top:10px;
+    background:orange;
+    color:white;
+    padding:10px 18px;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.nav-btn:hover{
+    background:darkorange;
+}
+
+.events{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.card{
+    background:white;
+    width:260px;
+    margin:15px;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    background:#3498db;
+    color:white;
+    padding:10px 15px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:#2980b9;
+}
+
+/* popup */
+
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    display:none;
+}
+
+.overlay:target{
+    display:block;
+}
+
+.form-container{
+    background:white;
+    width:300px;
+    padding:20px;
+    border-radius:10px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:left;
+}
+
+input{
+    width:100%;
+    padding:8px;
+    margin:8px 0;
+}
+
+.submit{
+    background:green;
+    color:white;
+    border:none;
+    padding:10px;
+    width:100%;
+    border-radius:5px;
+}
+
+.close{
+    display:block;
+    text-align:center;
+    margin-top:10px;
+    text-decoration:none;
+    color:white;
+    background:red;
+    padding:8px;
+    border-radius:5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>College Events Registration</h1>
+<p>Register for all events in one place</p>
+<a href="events.html" class="nav-btn">View Event Details</a>
+</header>
+
+<section class="events">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<h2>Hackathon</h2>
+<p>Date: 25 March</p>
+<a href="#formPopup" class="btn">Register</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e">
+<h2>Dance Competition</h2>
+<p>Date: 27 March</p>
+<a href="#formPopup" class="btn">Register</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<h2>Quiz Contest</h2>
+<p>Date: 30 March</p>
+<a href="#formPopup" class="btn">Register</a>
+</div>
+
+</section>
+
+<!-- Popup Form -->
+<div id="formPopup" class="overlay">
+<div class="form-container">
+
+<h2>Event Registration</h2>
+
+<form>
+<label>Name</label>
+<input type="text" required>
+
+<label>Email</label>
+<input type="email" required>
+
+<label>Phone</label>
+<input type="tel" required>
+
+<button type="submit" class="submit">Submit</button>
+</form>
+
+<a href="#" class="close">Close</a>
+
+</div>
+</div>
+
+</body>
+</html>
